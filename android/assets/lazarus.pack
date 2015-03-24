@@ -1,0 +1,411 @@
+
+lazarus.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 509
+  size: 640, 480
+  orig: 640, 480
+  offset: 0, 0
+  index: -1
+spr_title
+  rotate: false
+  xy: 1, 207
+  size: 500, 300
+  orig: 500, 300
+  offset: 0, 0
+  index: 0
+spr_laz_jump_left
+  rotate: false
+  xy: 643, 909
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 0
+spr_laz_left
+  rotate: false
+  xy: 643, 909
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 0
+spr_laz_jump_left
+  rotate: false
+  xy: 1, 125
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 1
+spr_laz_jump_left
+  rotate: false
+  xy: 503, 427
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 2
+spr_laz_jump_left
+  rotate: false
+  xy: 643, 827
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 3
+spr_laz_jump_left
+  rotate: false
+  xy: 725, 909
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 4
+spr_laz_jump_left
+  rotate: false
+  xy: 1, 43
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 5
+spr_laz_jump_left
+  rotate: false
+  xy: 83, 125
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 6
+spr_laz_jump_right
+  rotate: false
+  xy: 503, 345
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 0
+spr_laz_jump_right
+  rotate: false
+  xy: 643, 745
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 1
+spr_laz_jump_right
+  rotate: false
+  xy: 725, 827
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 2
+spr_laz_jump_right
+  rotate: false
+  xy: 807, 909
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 3
+spr_laz_jump_right
+  rotate: false
+  xy: 83, 43
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 4
+spr_laz_jump_right
+  rotate: false
+  xy: 165, 125
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 5
+spr_laz_jump_right
+  rotate: false
+  xy: 503, 263
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 6
+spr_laz_left
+  rotate: false
+  xy: 643, 663
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 1
+spr_laz_left
+  rotate: false
+  xy: 725, 745
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 2
+spr_laz_left
+  rotate: false
+  xy: 807, 827
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 3
+spr_laz_left
+  rotate: false
+  xy: 889, 909
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 4
+spr_laz_left
+  rotate: false
+  xy: 165, 43
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 5
+spr_laz_left
+  rotate: false
+  xy: 247, 125
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 6
+spr_laz_right
+  rotate: false
+  xy: 643, 581
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 0
+spr_laz_right
+  rotate: false
+  xy: 725, 663
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 1
+spr_laz_right
+  rotate: false
+  xy: 807, 745
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 2
+spr_laz_right
+  rotate: false
+  xy: 889, 827
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 3
+spr_laz_right
+  rotate: false
+  xy: 247, 43
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 4
+spr_laz_right
+  rotate: false
+  xy: 329, 125
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 5
+spr_laz_right
+  rotate: false
+  xy: 725, 581
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: 6
+spr_box_card
+  rotate: false
+  xy: 585, 467
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_box_metal
+  rotate: false
+  xy: 1, 1
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_box_stone
+  rotate: false
+  xy: 503, 221
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_box_wood
+  rotate: false
+  xy: 971, 949
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_button
+  rotate: false
+  xy: 643, 539
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 1
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 2
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 3
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 8
+spr_laz_afraid
+  rotate: false
+  xy: 807, 703
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 9
+spr_laz_afraid
+  rotate: false
+  xy: 889, 785
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 4
+spr_laz_afraid
+  rotate: false
+  xy: 889, 785
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 5
+spr_laz_afraid
+  rotate: false
+  xy: 889, 785
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 6
+spr_laz_afraid
+  rotate: false
+  xy: 889, 785
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 7
+spr_laz_squished
+  rotate: false
+  xy: 329, 83
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_laz_squished
+  rotate: false
+  xy: 411, 165
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 1
+spr_laz_squished
+  rotate: false
+  xy: 585, 425
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 10
+spr_laz_squished
+  rotate: false
+  xy: 585, 425
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 9
+spr_laz_squished
+  rotate: false
+  xy: 43, 1
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 2
+spr_laz_squished
+  rotate: false
+  xy: 971, 907
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 3
+spr_laz_squished
+  rotate: false
+  xy: 685, 539
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 4
+spr_laz_squished
+  rotate: false
+  xy: 807, 661
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 5
+spr_laz_squished
+  rotate: false
+  xy: 453, 165
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 6
+spr_laz_squished
+  rotate: false
+  xy: 585, 383
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 7
+spr_laz_squished
+  rotate: false
+  xy: 85, 1
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 8
+spr_laz_stand
+  rotate: false
+  xy: 971, 865
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0
+spr_wall
+  rotate: false
+  xy: 727, 539
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0

@@ -7,12 +7,22 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 public class MyGdxLazarus extends Game 
 {
 	// Fields	
 	private SpriteBatch batch;
 	private Screen splashScreen;
+	private TextureAtlas atlas;
+	
+	//Properties
+	public TextureAtlas getAtlas()
+	{
+		return this.atlas;
+	}
+	
+	
 	
 	// Properties
 	public SpriteBatch getBatch()
@@ -22,7 +32,8 @@ public class MyGdxLazarus extends Game
 		
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
+		this.batch = new SpriteBatch();
+		this.atlas = new TextureAtlas(Gdx.files.internal("lazarus.pack"));
 		this.splashScreen = new SplashScreen(this);
 		setScreen(this.splashScreen);
 	}
