@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.lazarus.MyGdxLazarus;
 
-public class Ball 
+public class Lazarus 
 {
 	//Fields
 	private MyGdxLazarus game;
@@ -17,9 +17,28 @@ public class Ball
 	private int spriteNumber = 0;
 	private float timerMaximum = 10f/60f;
 	private int width, height;
+	private AnimatedSprite state;
+	private Idle idle;
 	
+	//Properties
+	public MyGdxLazarus getGame()
+	{
+		return this.game;
+	}
+	public Array<AtlasRegion> getRegions()
+	{
+		return this.regions;
+	}
+	public Vector2 getPosition()
+	{
+		return this.position;
+	}
+	public AnimatedSprite State()
+	{
+		return this.state;
+	}
 	//Constructor
-	public Ball(MyGdxLazarus game, Vector2 position, String name, float timerMaximum)
+	public Lazarus(MyGdxLazarus game, Vector2 position, String name, float timerMaximum)
 	{
 		this.game = game;
 		this.position = position;
@@ -32,35 +51,18 @@ public class Ball
 		this.width = this.regions.first().getRegionWidth();
 		this.height = this.regions.first().getRegionHeight();
 		
-		
+		this.idle = new Idle(this);
+		this.state = this.idle;		
 	}
 	
 	public void Update(float delta)
 	{
-		this.timer += delta;
-		
-		if ( this.timer > this.timerMaximum)
-		{
-			if ( this.spriteNumber < (this.regions.size - 1))
-			{
-				this.spriteNumber++;
-				Gdx.app.log("arraysize", Integer.toString(this.regions.size));
-			}
-			else
-			{
-				this.spriteNumber = 0;
-			}
-			this.timer = 0f;
-		}
+		this.state.Update(delta);
 	}
 	
 	public void Draw(float delta)
 	{
-		this.game.getBatch().draw(this.regions.get(this.spriteNumber),
-								  this.position.x,
-								  this.position.y,
-								  this.width,
-								  this.height);
+		this.state.Draw(delta);
 	}
 	
 
