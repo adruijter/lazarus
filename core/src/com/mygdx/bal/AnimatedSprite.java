@@ -1,5 +1,8 @@
 package com.mygdx.bal;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+import com.badlogic.gdx.utils.Array;
+
 public class AnimatedSprite 
 {
 	//Fields
@@ -8,6 +11,7 @@ public class AnimatedSprite
 	protected int height;
 	private float timer, timerMaximum;
 	private int spriteNumber = 0;
+	protected Array<AtlasRegion> regions;
 	
 	//Properties
 	
@@ -16,6 +20,7 @@ public class AnimatedSprite
 	public AnimatedSprite(Lazarus lazarus)
 	{
 		this.lazarus = lazarus;
+		this.timerMaximum = 10f/60f;
 	}
 	
 	
@@ -26,7 +31,7 @@ public class AnimatedSprite
 		
 		if ( this.timer > this.timerMaximum)
 		{
-			if ( this.spriteNumber < (this.lazarus.getRegions().size - 1))
+			if ( this.spriteNumber < (this.regions.size - 1))
 			{
 				this.spriteNumber++;
 				//Gdx.app.log("arraysize", Integer.toString(this.regions.size));
@@ -42,7 +47,7 @@ public class AnimatedSprite
 	//Draw
 	public void Draw(float delta)
 	{
-		this.lazarus.getGame().getBatch().draw(this.lazarus.getRegions().get(this.spriteNumber),
+		this.lazarus.getGame().getBatch().draw(this.regions.get(this.spriteNumber),
 				  				  			   this.lazarus.getPosition().x,
 				  				  			   this.lazarus.getPosition().y,
 				  				  			   this.width,

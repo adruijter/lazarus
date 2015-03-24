@@ -7,8 +7,6 @@ public class Idle extends AnimatedSprite
 {
 	//Fields
 	private Lazarus lazarus;
-	private Array<AtlasRegion> regions;
-
 	
 	//Properties
 	
@@ -18,6 +16,7 @@ public class Idle extends AnimatedSprite
 	{
 		super(lazarus);
 		this.lazarus = lazarus;
+		this.regions = new Array<AtlasRegion>();
 		this.regions = this.lazarus.getGame().getAtlas().findRegions("spr_laz_stand");
 		this.width = this.regions.first().getRegionWidth();
 		this.height = this.regions.first().getRegionHeight();

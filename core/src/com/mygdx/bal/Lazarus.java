@@ -13,10 +13,6 @@ public class Lazarus
 	private Vector2 position;
 	private String name;
 	private Array<AtlasRegion> regions;
-	private float timer;
-	private int spriteNumber = 0;
-	private float timerMaximum = 10f/60f;
-	private int width, height;
 	private AnimatedSprite state;
 	private Idle idle;
 	
@@ -38,19 +34,12 @@ public class Lazarus
 		return this.state;
 	}
 	//Constructor
-	public Lazarus(MyGdxLazarus game, Vector2 position, String name, float timerMaximum)
+	public Lazarus(MyGdxLazarus game, Vector2 position)
 	{
 		this.game = game;
 		this.position = position;
-		this.name = name;
-		this.timerMaximum = timerMaximum;
-		
-		this.regions = new Array<AtlasRegion>();
-		
-		this.regions = this.game.getAtlas().findRegions(name);
-		this.width = this.regions.first().getRegionWidth();
-		this.height = this.regions.first().getRegionHeight();
-		
+		//this.regions = new Array<AtlasRegion>();		
+		//this.regions = this.game.getAtlas().findRegions(name);		
 		this.idle = new Idle(this);
 		this.state = this.idle;		
 	}
