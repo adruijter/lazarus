@@ -21,7 +21,7 @@ public class AnimatedSprite
 	public AnimatedSprite(Lazarus lazarus)
 	{
 		this.lazarus = lazarus;
-		this.timerMaximum = 10f/60f;
+		this.timerMaximum = 2f/60f;
 	}
 	
 	

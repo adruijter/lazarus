@@ -34,7 +34,6 @@ public class Jump_Right extends AnimatedSprite
 		super.Update(delta);
 		if ( this.spriteNumber == this.maxSpriteNumber)
 		{
-			//Gdx.app.log("maxsprite", Integer.toString(this.maxSpriteNumber));
 			this.lazarus.setState(this.lazarus.getStand());
 			this.lazarus.getPosition().add(new Vector2(40f, 40f));
 			this.spriteNumber = 0;
