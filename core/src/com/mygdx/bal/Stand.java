@@ -1,5 +1,7 @@
 package com.mygdx.bal;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.utils.Array;
 
@@ -27,6 +29,11 @@ public class Stand extends AnimatedSprite
 	//Update
 	public void Update(float delta)
 	{
+		if (Gdx.input.isKeyPressed(Keys.RIGHT))
+		{
+			this.lazarus.setState(this.lazarus.getJump_right());
+		}
+		
 		super.Update(delta);
 	}
 	

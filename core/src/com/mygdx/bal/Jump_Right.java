@@ -1,5 +1,6 @@
 package com.mygdx.bal;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -31,10 +32,12 @@ public class Jump_Right extends AnimatedSprite
 	public void Update(float delta)
 	{
 		super.Update(delta);
-		if ( this.spriteNumber == this.maxSpriteNumber + 1)
+		if ( this.spriteNumber == this.maxSpriteNumber)
 		{
+			//Gdx.app.log("maxsprite", Integer.toString(this.maxSpriteNumber));
 			this.lazarus.setState(this.lazarus.getStand());
 			this.lazarus.getPosition().add(new Vector2(40f, 40f));
+			this.spriteNumber = 0;
 		}
 	}
 	

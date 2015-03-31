@@ -38,6 +38,10 @@ public class Lazarus
 	{
 		return this.stand;
 	}
+	public Jump_Right getJump_right()
+	{
+		return this.jump_right;
+	}
 	
 	//Constructor
 	public Lazarus(MyGdxLazarus game, Vector2 position)
@@ -46,7 +50,7 @@ public class Lazarus
 		this.position = position;	
 		this.stand = new Stand(this);
 		this.jump_right = new Jump_Right(this);
-		this.state = this.jump_right;		
+		this.state = this.stand;		
 	}
 	
 	public void Update(float delta)

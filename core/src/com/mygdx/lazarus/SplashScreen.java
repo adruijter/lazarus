@@ -28,7 +28,7 @@ public class SplashScreen implements Screen
 		//this.spriteList.add(new Lazarus(this.game, new Vector2(200f, 380f), "spr_laz_right", 5f/60f));
 		//this.spriteList.add(new Lazarus(this.game, new Vector2(400f, 380f), "spr_laz_squished", 5f/60f));	
 		//this.spriteList.add(new Lazarus(this.game, new Vector2(500f, 380f), "spr_laz_afraid", 5f/60f));
-		this.spriteList.add(new Lazarus(this.game, new Vector2(350f, 380f)));
+		this.spriteList.add(new Lazarus(this.game, new Vector2(350f, 20f)));
 	}
 	
 	@Override
