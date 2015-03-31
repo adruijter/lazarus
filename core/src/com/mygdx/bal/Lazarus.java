@@ -1,9 +1,7 @@
 package com.mygdx.bal;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.utils.Array;
 import com.mygdx.lazarus.MyGdxLazarus;
 
 public class Lazarus 
@@ -11,37 +9,44 @@ public class Lazarus
 	//Fields
 	private MyGdxLazarus game;
 	private Vector2 position;
-	private String name;
-	private Array<AtlasRegion> regions;
 	private AnimatedSprite state;
-	private Idle idle;
+	private Stand stand;
+	private Jump_Right jump_right;
 	
 	//Properties
 	public MyGdxLazarus getGame()
 	{
 		return this.game;
 	}
-	public Array<AtlasRegion> getRegions()
-	{
-		return this.regions;
-	}
 	public Vector2 getPosition()
 	{
 		return this.position;
 	}
-	public AnimatedSprite State()
+	public AnimatedSprite getState()
 	{
 		return this.state;
 	}
+	public void setState(AnimatedSprite animation)
+	{
+		this.state = animation;
+	}
+	public void setPosition(Vector2 position)
+	{
+		this.position.add(position);
+	}
+	public Stand getStand()
+	{
+		return this.stand;
+	}
+	
 	//Constructor
 	public Lazarus(MyGdxLazarus game, Vector2 position)
 	{
 		this.game = game;
-		this.position = position;
-		//this.regions = new Array<AtlasRegion>();		
-		//this.regions = this.game.getAtlas().findRegions(name);		
-		this.idle = new Idle(this);
-		this.state = this.idle;		
+		this.position = position;	
+		this.stand = new Stand(this);
+		this.jump_right = new Jump_Right(this);
+		this.state = this.jump_right;		
 	}
 	
 	public void Update(float delta)

@@ -10,8 +10,9 @@ public class AnimatedSprite
 	protected int width;
 	protected int height;
 	private float timer, timerMaximum;
-	private int spriteNumber = 0;
+	protected int spriteNumber = 0;
 	protected Array<AtlasRegion> regions;
+	protected int maxSpriteNumber;
 	
 	//Properties
 	
@@ -31,7 +32,7 @@ public class AnimatedSprite
 		
 		if ( this.timer > this.timerMaximum)
 		{
-			if ( this.spriteNumber < (this.regions.size - 1))
+			if ( this.spriteNumber < this.maxSpriteNumber)
 			{
 				this.spriteNumber++;
 				//Gdx.app.log("arraysize", Integer.toString(this.regions.size));
