@@ -12,6 +12,9 @@ public class Lazarus
 	private AnimatedSprite state;
 	private Stand stand;
 	private Jump_Right jump_right;
+	private JumpLeft jumpLeft;
+	private JumpLeftDown jumpLeftDown;
+	private FallDown fallDown;
 	
 	//Properties
 	public MyGdxLazarus getGame()
@@ -42,7 +45,18 @@ public class Lazarus
 	{
 		return this.jump_right;
 	}
-	
+	public JumpLeft getJumpLeft()
+	{
+		return this.jumpLeft;
+	}
+	public JumpLeftDown getJumpLeftDown()
+	{
+		return this.jumpLeftDown;
+	}
+	public FallDown getFallDown()
+	{
+		return this.fallDown;
+	}
 	//Constructor
 	public Lazarus(MyGdxLazarus game, Vector2 position)
 	{
@@ -50,6 +64,9 @@ public class Lazarus
 		this.position = position;	
 		this.stand = new Stand(this);
 		this.jump_right = new Jump_Right(this);
+		this.jumpLeft = new JumpLeft(this);
+		this.jumpLeftDown = new JumpLeftDown(this);
+		this.fallDown = new FallDown(this);
 		this.state = this.stand;		
 	}
 	
@@ -62,6 +79,4 @@ public class Lazarus
 	{
 		this.state.Draw(delta);
 	}
-	
-
 }

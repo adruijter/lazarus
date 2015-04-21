@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
-public class Stand extends AnimatedSprite
+public class FallDown extends AnimatedSprite
 {
 	//Fields
 	private Lazarus lazarus;
@@ -16,7 +16,7 @@ public class Stand extends AnimatedSprite
 	
 	
 	//Constructor
-	public Stand(Lazarus lazarus)
+	public FallDown(Lazarus lazarus)
 	{
 		super(lazarus);
 		this.lazarus = lazarus;
@@ -30,25 +30,14 @@ public class Stand extends AnimatedSprite
 	//Update
 	public void Update(float delta)
 	{
-		if (Gdx.input.isKeyPressed(Keys.RIGHT))
+		if (this.lazarus.getPosition().y > 40f)
 		{
-			this.lazarus.setState(this.lazarus.getJump_right());
+			this.lazarus.getPosition().add(new Vector2(0f, -2f));
 		}
-		
-		if (Gdx.input.isKeyPressed(Keys.LEFT))
+		else
 		{
-			this.lazarus.setState(this.lazarus.getJumpLeft());
-			this.lazarus.getPosition().add(new Vector2(-40f, 0f));
-			
+			this.lazarus.setState(this.lazarus.getStand());
 		}
-		
-		if (Gdx.input.isKeyPressed(Keys.A))
-		{
-			this.lazarus.setState(this.lazarus.getJumpLeftDown());
-			this.lazarus.getPosition().add(new Vector2(-40f, 0f));
-			
-		}
-		
 		super.Update(delta);
 	}
 	

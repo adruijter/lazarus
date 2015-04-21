@@ -48,7 +48,7 @@ public class AnimatedSprite
 	//Draw
 	public void Draw(float delta)
 	{
-		this.lazarus.getGame().getBatch().draw(this.regions.get(this.spriteNumber),
+		this.lazarus.getGame().getBatch().draw(this.regions.get(Math.abs(this.spriteNumber)),
 				  				  			   this.lazarus.getPosition().x,
 				  				  			   this.lazarus.getPosition().y,
 				  				  			   this.width,
