@@ -26,7 +26,7 @@ public class SplashScreen implements Screen
 		this.title = new Image(this.game, "Title.gif", new Vector2(120f, 70f));
 		this.stone = game.getAtlas().findRegions("spr_wall");
 		this.spriteList = new Array<Lazarus>();
-		this.spriteList.add(new Lazarus(this.game, new Vector2(7 * 40f, 1 * 40f)));
+		this.spriteList.add(new Lazarus(this.game, new Vector2(2 * 40f, 1 * 40f)));
 	}
 	
 	@Override
@@ -53,7 +53,7 @@ public class SplashScreen implements Screen
 		{
 			lazarus.Draw(delta);
 		}
-		this.game.getBatch().draw(this.stone.get(0), 8 * 40f,  1 * 40f);
+		this.game.getBatch().draw(this.stone.get(0), 7 * 40f,  1 * 40f);
 		this.game.getBatch().end();
 	}
 

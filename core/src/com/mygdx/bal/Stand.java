@@ -49,6 +49,17 @@ public class Stand extends AnimatedSprite
 			
 		}
 		
+		if (Gdx.input.isKeyPressed(Keys.Q))
+		{			
+			this.lazarus.setState(this.lazarus.getWalkLeft());
+			this.lazarus.getPosition().add(new Vector2(-40f, 0f));
+		}
+		
+		if (Gdx.input.isKeyPressed(Keys.W))
+		{			
+			this.lazarus.setState(this.lazarus.getWalkRight());
+		}
+		
 		super.Update(delta);
 	}
 	

@@ -15,6 +15,8 @@ public class Lazarus
 	private JumpLeft jumpLeft;
 	private JumpLeftDown jumpLeftDown;
 	private FallDown fallDown;
+	private WalkLeft walkLeft;
+	private WalkRight walkRight;
 	
 	//Properties
 	public MyGdxLazarus getGame()
@@ -57,6 +59,15 @@ public class Lazarus
 	{
 		return this.fallDown;
 	}
+	public WalkLeft getWalkLeft()
+	{
+		return this.walkLeft;
+	}
+	public WalkRight getWalkRight()
+	{
+		return this.walkRight;
+	}
+	
 	//Constructor
 	public Lazarus(MyGdxLazarus game, Vector2 position)
 	{
@@ -67,6 +78,8 @@ public class Lazarus
 		this.jumpLeft = new JumpLeft(this);
 		this.jumpLeftDown = new JumpLeftDown(this);
 		this.fallDown = new FallDown(this);
+		this.walkLeft = new WalkLeft(this);
+		this.walkRight = new WalkRight(this);
 		this.state = this.stand;		
 	}
 	
