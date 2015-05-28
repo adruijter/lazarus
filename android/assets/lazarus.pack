@@ -409,3 +409,10 @@ spr_wall
   orig: 40, 40
   offset: 0, 0
   index: 0
+spr_empty
+  rotate: false
+  xy: 600, 100
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: 0

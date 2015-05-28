@@ -3,7 +3,7 @@ package com.mygdx.lazarus;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
-public class Image 
+public class Image
 {
 	// Fields
 	private MyGdxLazarus game;
