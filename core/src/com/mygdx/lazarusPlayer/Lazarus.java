@@ -1,4 +1,4 @@
-package com.mygdx.bal;
+package com.mygdx.lazarusPlayer;
 
 
 import com.badlogic.gdx.math.Vector2;

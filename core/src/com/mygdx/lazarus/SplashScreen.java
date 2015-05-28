@@ -6,7 +6,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
-import com.mygdx.bal.Lazarus;
+import com.mygdx.lazarusPlayer.Lazarus;
 
 public class SplashScreen implements Screen
 {
@@ -30,7 +30,7 @@ public class SplashScreen implements Screen
 		this.title = new Image(this.game, "Title.gif", new Vector2(120f, 70f));
 		//this.stone = game.getAtlas().findRegions("spr_wall");
 		this.spriteList = new Array<Lazarus>();
-		this.spriteList.add(new Lazarus(this.game, new Vector2(2 * 40f, 1 * 40f)));
+		this.spriteList.add(new Lazarus(this.game, new Vector2(0 * 40f, 0 * 40f)));
 		//this.wall0 = new Wall(this.game, new Vector2(6*40f, 1*40f));
 		try {
 			this.level = new Level(this.game, 0);
@@ -54,6 +54,8 @@ public class SplashScreen implements Screen
 		{
 			lazarus.Update(delta);
 		}
+		
+		this.level.Update(delta);
 		
 		// Draw
 		this.game.getBatch().begin();

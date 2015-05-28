@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.math.Vector2;
+import com.mygdx.lazarusPlayer.Lazarus;
 
 public class Level 
 {
@@ -17,6 +18,7 @@ public class Level
 	private int lineWidth;
 	private int linesCount;
 	private TexturePackImage walls[][];
+	private Lazarus lazarus;
 	
 	
 	public Level(MyGdxLazarus game, int levelIndex) throws IOException
@@ -70,10 +72,17 @@ public class Level
 		{
 			case 'w':
 				return new Wall(this.game, position);
-				
+			case 'L':
+				this.lazarus = new Lazarus(this.game, position);
+				return new TexturePackImage(this.game, "spr_empty", position);				
 			default:
 				return new TexturePackImage(this.game, "spr_empty", position);
 		}
+	}
+	
+	public void Update(float delta)
+	{
+		this.lazarus.Update(delta);
 	}
 	
 	public void Draw(float delta)
@@ -85,7 +94,9 @@ public class Level
 				
 				this.walls[j][i].Draw(delta);
 			}
-		}		
+		}
+		
+		this.lazarus.Draw(delta);
 	}
 	
 }
