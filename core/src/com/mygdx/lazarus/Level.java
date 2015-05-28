@@ -16,6 +16,7 @@ public class Level
 	private ArrayList<String> lines;
 	private int lineWidth;
 	private int linesCount;
+	private TexturePackImage walls[][];
 	
 	
 	public Level(MyGdxLazarus game, int levelIndex) throws IOException
@@ -48,6 +49,19 @@ public class Level
 		
 		this.linesCount = this.lines.size();
 		Gdx.app.log("Aantal regels", Integer.toString(this.linesCount));
+		
+		this.walls = new TexturePackImage[this.lineWidth][this.linesCount];
+		
+		for (int i = 0; i < this.linesCount; i++)
+		{
+			for(int j = 0; j < this.lineWidth; j++)
+			{
+				char characterInText  = this.lines.get(i).charAt(j);
+				this.walls[j][i] = this.loadObject(characterInText, new Vector2(j * 40, i * 40));
+			}
+		}
+		
+		
 	}
 	
 	private TexturePackImage loadObject(char element, Vector2 position)
@@ -60,6 +74,18 @@ public class Level
 			default:
 				return new TexturePackImage(this.game, "spr_empty", position);
 		}
+	}
+	
+	public void Draw(float delta)
+	{
+		for (int i = 0; i < this.linesCount; i++)
+		{
+			for(int j = 0; j < this.lineWidth; j++)
+			{
+				
+				this.walls[j][i].Draw(delta);
+			}
+		}		
 	}
 	
 }

@@ -28,10 +28,10 @@ public class SplashScreen implements Screen
 		this.game = game;
 		this.background = new Image(this.game, "Background.bmp", Vector2.Zero);
 		this.title = new Image(this.game, "Title.gif", new Vector2(120f, 70f));
-		this.stone = game.getAtlas().findRegions("spr_wall");
+		//this.stone = game.getAtlas().findRegions("spr_wall");
 		this.spriteList = new Array<Lazarus>();
 		this.spriteList.add(new Lazarus(this.game, new Vector2(2 * 40f, 1 * 40f)));
-		this.wall0 = new Wall(this.game, new Vector2(6*40f, 1*40f));
+		//this.wall0 = new Wall(this.game, new Vector2(6*40f, 1*40f));
 		try {
 			this.level = new Level(this.game, 0);
 		} catch (IOException e) {
@@ -57,15 +57,17 @@ public class SplashScreen implements Screen
 		
 		// Draw
 		this.game.getBatch().begin();
+		
 		this.background.Draw(delta);
-		this.title.Draw(delta);	
+		this.title.Draw(delta);
+		this.level.Draw(delta);
 		for (Lazarus lazarus : this.spriteList )
 		{
 			lazarus.Draw(delta);
 		}
-		this.game.getBatch().draw(this.stone.get(0), 7 * 40f,  1 * 40f);
+		//this.game.getBatch().draw(this.stone.get(0), 7 * 40f,  1 * 40f);
 		//Teken de Wall via de Wall Class
-		this.wall0.Draw(delta);
+		//this.wall0.Draw(delta);
 		
 		this.game.getBatch().end();
 	}
