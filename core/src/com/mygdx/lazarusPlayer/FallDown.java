@@ -30,7 +30,7 @@ public class FallDown extends AnimatedSprite
 	//Update
 	public void Update(float delta)
 	{
-		if (this.lazarus.getPosition().y > 40f)
+		if (this.lazarus.getPosition().y > 80f)
 		{
 			this.lazarus.getPosition().add(new Vector2(0f, -2f));
 		}

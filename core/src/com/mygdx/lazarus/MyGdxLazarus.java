@@ -13,7 +13,7 @@ public class MyGdxLazarus extends Game
 {
 	// Fields	
 	private SpriteBatch batch;
-	private Screen splashScreen;
+	private SplashScreen splashScreen;
 	private TextureAtlas atlas;
 	
 	//Properties
@@ -22,7 +22,10 @@ public class MyGdxLazarus extends Game
 		return this.atlas;
 	}
 	
-	
+	public SplashScreen getSplashScreen()
+	{
+		return this.splashScreen;
+	}	
 	
 	// Properties
 	public SpriteBatch getBatch()
