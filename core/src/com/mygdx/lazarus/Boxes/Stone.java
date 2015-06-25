@@ -5,7 +5,7 @@ import com.mygdx.lazarus.MyGdxLazarus;
 
 public class Stone extends Box
 {
-	
+	// Constructor	
 	public Stone(MyGdxLazarus game, Vector2 position) 
 	{		
 		super(game, position, "spr_box_stone");

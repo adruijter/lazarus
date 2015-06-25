@@ -27,6 +27,11 @@ public class Box
 	
 	
 	//Properties
+	public String getBoxType()
+	{
+		return this.boxType;
+	}
+	
 	public Vector2 getPosition()
 	{
 		this.collisionRect.x = this.position.x;
@@ -70,7 +75,7 @@ public class Box
 	{
 		this.game = game;
 		this.position = position;
-		
+		this.boxType = boxType;
 		this.regions = new Array<AtlasRegion>();
 		this.regions = this.game.getAtlas().findRegions(boxType);
 		

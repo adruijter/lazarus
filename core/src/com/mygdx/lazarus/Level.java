@@ -115,9 +115,10 @@ public class Level
 	public void Update(float delta)
 	{
 		this.lazarus.Update(delta);
-		for (Box box : this.boxes)
+		
+		for (int i = 0; i < this.boxes.size(); i++)
 		{
-			box.Update(delta);
+			this.boxes.get(i).Update(delta);
 		}
 		this.generateBoxes.Update(delta);
 	}
@@ -135,9 +136,9 @@ public class Level
 		
 		this.lazarus.Draw(delta);
 		
-		for (Box box : this.boxes)
+		for (int i = 0; i < this.boxes.size(); i++)
 		{
-			box.Draw(delta);
+			this.boxes.get(i).Draw(delta);
 		}
 	}
 	

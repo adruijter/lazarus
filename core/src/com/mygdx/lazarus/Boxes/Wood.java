@@ -5,7 +5,7 @@ import com.mygdx.lazarus.MyGdxLazarus;
 
 public class Wood extends Box
 {
-	
+	//Constructor		
 	public Wood(MyGdxLazarus game, Vector2 position) 
 	{		
 		super(game, position, "spr_box_wood");

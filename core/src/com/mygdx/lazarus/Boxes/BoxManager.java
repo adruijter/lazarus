@@ -1,5 +1,8 @@
 package com.mygdx.lazarus.Boxes;
 
+import java.util.ArrayList;
+
+import com.badlogic.gdx.Gdx;
 import com.mygdx.lazarus.MyGdxLazarus;
 
 public class BoxManager 
@@ -7,6 +10,7 @@ public class BoxManager
 	// Fields
 	private MyGdxLazarus game;
 	private Box box;
+	private ArrayList<Box> boxes;
 	
 	// Properties
 	
@@ -16,19 +20,27 @@ public class BoxManager
 	{
 		this.game = game;
 		this.box = box;
+		this.boxes = new ArrayList<Box>();
+		
 	}
 	
 	// Methods
 	public void Update(float delta)
 	{
-		for (Box box : this.game.getSplashScreen().getLevel().getBoxes())
+		this.boxes = this.game.getSplashScreen().getLevel().getBoxes();
+		for (int i = 0; i < this.boxes.size(); i++)
 		{
-			if (this.box.getCollisionRect().overlaps(box.getCollisionRect()))
+			if (this.box.getCollisionRect().overlaps(this.boxes.get(i).getCollisionRect()))
 			{
-				if (!this.box.equals(box))
+				Gdx.app.log("idleBlokje", this.boxes.get(i).getBoxType());
+				if (!this.box.equals(this.boxes.get(i)))
 				{
-					//this.game.getSplashScreen().getLevel().getBoxes().remove(box);
-					//break;
+					Gdx.app.log("moveBlokje", this.box.getBoxType());
+					if ( this.box.getBoxType() == "spr_box_card")
+					 {						
+						 this.game.getSplashScreen().getLevel().getBoxes().remove(this.boxes.get(i));
+						 break;
+					 }
 				}
 			}
 		}
